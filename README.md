@@ -1,5 +1,5 @@
 # UCDGenCatScraper
-A little python script to scrape data from the UC Davis General Catalogue
+A little python script to scrape data from the UC Davis General Catalog
 
 HOW TO USE:
 
