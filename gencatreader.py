@@ -9,11 +9,14 @@ def alphaStart(s): # @param: string @return: location of the first alpha value o
 	startChar = 0
 	stopChecking = False
 	for char in s:
-		if char.isalpha() and stopChecking == False:
+		if not char.isnumeric() and stopChecking == False:
 			stopChecking = True
 		elif stopChecking == False:
 			startChar += 1
-	return startChar
+	if startChar > 0 and float(s[0:startChar]) > 800: #makes sure we're getting rid of page numbers only and (hopefully) not anything else
+		return startChar
+	else:
+		return 0
 	
 def stillTitle(s): #checks to see if string s is still part of the title of a course
 	titleChar = True
